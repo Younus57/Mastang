@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mustang 3D Configurator Studio</title>
+    <meta name="description" content="Interactive 360-degree 3D Mustang car configurator with real-time lighting adjustments, high-fidelity vehicle animations, custom interior/exterior trims, and engine sound synthesizer." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,700;0,800;1,700;1,800&family=JetBrains+Mono:wght@400;600;700;800&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        background-color: #0a0a0a;
+        color: #f4f4f5;
+        font-family: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        overflow: hidden;
+        user-select: none;
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      .font-display {
+        font-family: 'Syne', 'Outfit', sans-serif;
+      }
+      .font-heading {
+        font-family: 'Chakra Petch', sans-serif;
+      }
+      /* Custom scrollbars */
+      ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(15, 17, 23, 0.8);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(225, 29, 72, 0.4);
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(225, 29, 72, 0.8);
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      @keyframes tickerSlide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-ticker {
+        display: flex;
+        width: max-content;
+        animation: tickerSlide 25s linear infinite;
+      }
+      .animate-ticker:hover {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body class="bg-neutral-950 text-neutral-100 overflow-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

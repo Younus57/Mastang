@@ -1,0 +1,6 @@
+{
+  "name": "Mustang 3D Configurator Studio",
+  "description": "Interactive 360-degree 3D Mustang car configurator with real-time lighting, high-fidelity vehicle animations, custom exterior & interior trims, and engine sound simulator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
